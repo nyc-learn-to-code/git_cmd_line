@@ -8,15 +8,18 @@
 - [History](#history)
 - [Crash Course Command Line](#crash-course-command-line)
   * [Exercises](#exercises)
+- [Atom Tips](#atom-tips)
 - [Git vs Github](#git-vs-github)
   * [GitHub Setup](#github-setup)
 - [Local Git Usage](#local-git-usage)
   * [Init](#init)
+  * [Quick Edits](#quick-edits)
   * [Git Commands](#git-commands)
     + [Status](#status)
     + [Diff](#diff)
   * [Add (Staging)](#add-staging)
   * [Commit](#commit)
+    + [Commit Message Advice](#commit-message-advice)
   * [Exercises](#exercises-1)
 - [Remote Setup](#remote-setup)
   * [Push](#push)
@@ -50,6 +53,10 @@
 
 ### Exercises
 
+## Atom Tips
+
+See the helpful notes on how to use [**Atom**](https://github.com/nyc-learn-to-code/learn_git/blob/master/atom_tips.md).
+
 ## Git vs Github
 
 ### GitHub Setup
@@ -57,6 +64,31 @@
 ## Local Git Usage
 
 ### Init
+
+### Quick Edits
+
+Open the project in `atom` by typing the following:
+
+```
+atom .
+```
+
+Create a new file called `README.md` by clicking the lefthand project space and hit `SHIFT + A` and typing the name `README.md`.
+
+
+In your `README` file add the following.
+
+`README.md`
+
+```markdown
+# Learn To Code
+## Love For Pizza
+
+My favorite pizza toppings are...
+
+```
+
+Then save the file.
 
 ### Git Commands
 
