@@ -29,6 +29,7 @@
   * [Pull](#pull)
   * [Exercises](#exercises-3)
 - [Branching](#branching)
+  * [Create](#create)
   * [Rename](#rename)
   * [Checkout](#checkout)
   * [Delete](#delete)
@@ -38,9 +39,6 @@
     + [Syncing](#syncing)
   * [Exercises](#exercises-5)
 - [Conflicts](#conflicts)
-  * [Exercises](#exercises-6)
-- [WIP Commit and Amending](#wip-commit-and-amending)
-- [Git Ignoring](#git-ignoring)
 
 <!-- tocstop -->
 
@@ -445,21 +443,121 @@ Go to your GitHub repo and verify that your changes were pushed.
 
 ## Remote Changes
 
+* Switch back into your `pizza` project. 
+* Then go to GH and add click the `README.md` file. 
+* Then click the pencil on the upper right corner.
+* Erase two toppings and commit the changes with a **Summary** and **Description**.
+
 ### Pull 
 
+Now your master contains changes that you don't have. Retrieve those changes using `pull`
+
+```
+git pull --rebase origin master
+```
+
+Which is just saying grab the changes from the remote that you don't have. The `--rebase` just tells it to how to add those changes. 
+
+Open your local `README.md` to verify it has the changes.
+
 ### Exercises
+
+* Go back on GH and add one more topping and commit it.
+* Pull the change and open your local README to see the changes.
 
 ## Branching
 
+Because you be pushing and pull many different changes it's important everyone isn't doing that for many minor things. This is why we isolate the work we want to do using branches, a copy of `master` with the changes we want to introduce.
+
+### Create
+
+Create a new branch with some changes
+
+```
+git checkout -b add-some-toppings
+```
+
 ### Rename
+
+If you don't like the name you chose you can rename the branch using
+
+```
+git branch -m add-more-toppings
+```
 
 ### Checkout
 
+You switch back to your master branch using checkout
+
+```
+git checkout master
+```
+
+Switch to branch you created
+
+```
+git checkout add-more-toppings
+```
+
+Or quickly switch between the last branch you were in using `-`
+
+```
+git checkout -
+```
+
 ### Delete
+
+Switch to your `master` branch.
+
+```
+git checkout master
+```
+
+Create a new branch
+
+```
+git checkout -b play-work
+```
+
+Then switch back to master
+
+```
+git checkout master
+```
+
+View the branches you've created so far.
+
+```
+git branch
+```
+
+Then delete the one you want
+
+```
+git branch -D play-work
+```
 
 ### Exercises
 
+* Create a branch called `more-play`
+* Switch back to master
+* Display all branches
+* Delete the `more-play` branch
+
 ## Pull Request
+
+Switch back to your `add-more-toppings` branch.
+
+* Add two more toppings to the your `README.md`
+* Commit the changes
+
+Now we have commited work on our branch. We can push this branch to github
+
+```
+git push -u origin add-more-topppings
+```
+
+Now go to your repo on GitHub and verify it was pushed. There should be a notification with a green button asking you to create a pull request.
 
 Click the compare and pull request button. Then give the pull request a title and description.
 
@@ -505,11 +603,18 @@ Now you are up to date and your local repo is tidy.
 
 ### Exercises
 
+* Create a branch called `remove-toppings` 
+* Remove all but one topping in your `README.md`
+* Commit the change
+* Push the new branch
+* Add one more topping to your `README.md`
+* Commit the change
+* Push to your branch using by just saying `git push`.
+* Go to GitHub and create a pull request.
+* Merge the PR
+* Checkout your master branch locally and pull the GH changes from master
+* Delete you `remove-toppings` branch. 
+
 ## Conflicts
 
-### Exercises
-
-## WIP Commit and Amending
-
-## Git Ignoring
-
+In class discussion.
