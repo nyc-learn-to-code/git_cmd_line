@@ -65,6 +65,56 @@ See the helpful notes on how to use [**Atom**](https://github.com/nyc-learn-to-c
 
 ### Init
 
+To start a new project make a new project folder.
+
+```
+mkdir pizza
+```
+
+And change into it.
+
+```
+cd pizza
+```
+
+Then initialize a new git project in that directory.
+
+```
+git init
+```
+
+If you list your directory's folders you should see the new `.git` folder.
+
+```
+ls -a
+```
+
+This is where git stores all your local changes. You can look at it by listing its contents.
+
+```
+ls -a .git
+```
+
+You should see the following structure.
+
+```
+	COMMIT_EDITMSG
+	FETCH_HEAD
+	HEAD
+	ORIG_HEAD
+	branches
+	config
+	description
+	hooks
+	index
+	info
+	logs
+	objects
+	refs
+```
+
+We won't cover how git uses these, but it's cool to see it's all right there.
+
 ### Quick Edits
 
 Open the project in `atom` by typing the following:
@@ -94,9 +144,87 @@ Then save the file.
 
 #### Status
 
+If you're making edits or you are unsure about what you've done in your project the `git status` will help you get a quick idea.
+
+```
+git status
+```
+
+It should print out a helpful update of the files changed and tracked so far.
+
+```
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+    README.md
+```
+
+Here it's telling us we haven't tracked our new `README.md` file and that we are working toward our `Initial commit`.
+
 #### Diff 
 
+If you are wondering what changed you can view this easily using `git diff`. You should see the following.
+
+We'll revisit this once we've got a history of changes to compare against. You can try running it now, but you're not going to see anything.
+
 ### Add (Staging)
+
+Let's start tracking our changes to the `README`
+
+```
+git add README.md
+```
+
+The pattern here is just `git add <your_file_path>`. This allows git to cache the current set of changes to a file. 
+
+If you run `git status` you should see the following:
+
+```
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+    new file:   README.md
+```
+
+See how `README.md` is no longer under the `Untracked files:` list. You can also continue to make changes and rest assured the cached file can be recovered.
+
+You can also now view the file changes in the cache using `git diff`.
+
+```
+git diff --cached
+```
+
+#### Discarding Changes
+
+If you've made some unwanted changes to a file since your last staging then you recover the cached version easily. For example, if you delete the cached file accidentally.
+
+```
+rm README
+```
+
+Then you can observe it is gone by running git status and observing the `Changes not staged for commit`.
+
+```
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+    deleted:    README.md
+```
+
+You can then recover the deleted file by checking it out from the cache.
+
+```
+git checkout -- README.md
+```
 
 ### Commit
 
