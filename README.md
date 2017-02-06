@@ -386,6 +386,16 @@ Use your message description to explain **why** you are making the change. Brief
 
 ## Remote Setup
 
+Recall that GH is going to host our remote. Thus we'll need to create a new GitHub **New Repository** on GitHub for our pizza app.
+
+![click the plus sign in the upper right scree](new_gh_repo.png)
+
+Click the plus sign in the upper righthand side of your GH header and select new repository
+
+![give it a name](name_gh_repo.png)
+
+Give the repo the name `pizza-project`. 
+
 ### Push
 
 ## Exercises
