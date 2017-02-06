@@ -46,13 +46,89 @@
 
 ## Overall Objectives
 
+| Objectives |
+| :--- |
+| Describe and utilize the basics of git local version control: `staging`, `committing`, `branching`, and `remote syncing`.|
+| Integrate GitHub as a remote repo and utilize it's tools for code review. |
+| Discuss and utilize workflows for special git circumstances: `ammending` and `conflicts`. |
+
 ## Vocab/Discussion
+
+* Repo or repository
+* Local repository
+* Remote repository
+* Git
+* GitHub
+* GitHub Desktop
+* Terminal
 
 ## History
 
+Git was created by Linus Torvalds in 2005. It was intended to be a distributed version control system that was suitable for collaborationon the Linux Kernel. Then the Linux Kernel team had a falling out with a leading source control system, BitKeeper, which had been allowing them to utilize it for work on kernel. Other projects were around at that time, but lacked the distributed version control features that Torvalds liked from his experience with BitKeeper.  
+
 ## Crash Course Command Line
 
+As a crash course in the command line go to your terminal and try the following.
+
+**Create a directory**
+
+```
+mkdir example
+```
+
+**Change into the directory**
+
+```
+cd example
+```
+
+**Print the current directory**
+
+```
+pwd
+```
+
+**Quickly create an empty file**
+
+```
+touch hello.txt
+```
+
+**List the contents in the directory**
+
+```
+ls ./
+```
+
+The `./` represents the current directory
+
+You can list the contents of the parent directory using `..`
+
+```
+ls ../
+```
+
+**Delete a File**
+
+```
+rm hello.txt
+```
+
+**Change into the parent directory**
+
+```
+cd ../
+```
+
 ### Exercises
+
+* Create a folder called `cats`.
+* Change into the folder
+* Create three files: `meowsers.txt`, `fluffers.txt`, and `whiskers.txt`.
+* List the contents of the directory.
+* List the content of the parent directory.
+* Delete the `fluffers.txt` and `whiskers.txt`.
+* Change into the parent directory of `cats` and then change back into it.
 
 ## Atom Tips
 
@@ -60,7 +136,28 @@ See the helpful notes on how to use [**Atom**](https://github.com/nyc-learn-to-c
 
 ## Git vs Github
 
+Just for clarification `Git` is the source control system for projects. GitHub is a web service that offers hosting for Git backed projects that offers teams tools and UI to help collaborate and track changes.
+
 ### GitHub Setup
+
+Let's configure your machine with your GitHub info:
+
+```
+git config --global user.name "YOUR NAME"
+```
+
+Then add your github email address:
+
+```
+git config --global user.email "YOUR EMAIL ADDRESS"
+```
+
+Avoid entering your password with every GitHub interaction and do the following:
+
+[Cache your password](https://help.github.com/articles/caching-your-github-password-in-git/)
+
+
+> Alternatively you can [use these instructions](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) for setting up SSH with GH if you won't have troubles communicating over that port in your primary place of development.
 
 ## Local Git Usage
 
