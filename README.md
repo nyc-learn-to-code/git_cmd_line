@@ -131,7 +131,7 @@ git pull --rebase origin master
 Then we will need to delete our local branch.
 
 ```
-git branch -d `add-more-toppings`
+git branch -d add-more-toppings
 ```
 
 Now you are up to date and your local repo is tidy.
