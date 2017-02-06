@@ -396,9 +396,52 @@ Click the plus sign in the upper righthand side of your GH header and select new
 
 Give the repo the name `pizza-project`. 
 
+Copy the link for the GH repo and add it as your project remote.
+
+```
+git remote add origin <YOUR_GITHUB_REPO_URL>
+```
+
+Check that your remote was added by checking your remote info.
+
+```
+git remote --verbose
+```
+
 ### Push
 
+Now that your remote has been added your can confidently push to your `origin`.
+
+```
+git push origin master 
+```
+
+Here we are saying
+
+```
+git push <REMOTE_NAME> <BRANCH_NAME>
+```
+
+Our `origin` is the repo we just created and the `master` branch is the default branch for all git work.
+
+Go to your GitHub repo and verify that your changes were pushed.
+
 ## Exercises
+
+* Quick Review:
+	* Edit your `README.md` to include two more pizza toppings.
+	* Stage and commit the change.
+	* Push it and verify that it was properly pushed.
+* Workflow review:
+	* Switch to the parent directory `cd ../`
+	* Create a new folder called `favorite_cars`
+	* Change into it and initialize a new repo.
+	* Create a README with your three favorite cars
+	* Commit the changes
+	* Create a GitHub repo called `cars-project`
+	* Add the remote origin for that GH repo
+	* Push to GitHub
+	* Verify those changes were commited.
 
 ## Remote Changes
 
