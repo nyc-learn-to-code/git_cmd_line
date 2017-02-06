@@ -374,6 +374,16 @@ Use your message description to explain **why** you are making the change. Brief
 
 ### Exercises
 
+* Update your README with your three favorite toppings 
+* View the status of the changes you made
+* View the diff of changes 
+* Stage the new toppings added to the README
+* View the status of the changes and verify it was staged
+* Commit the changes with a good **Summary** and **Description**.
+* View the status and verify there is nothing untracked or cached.
+* Use `git show` to view the changes you made in the last commit.
+* Use `git log` to view the commits you've made.
+
 ## Remote Setup
 
 ### Push
