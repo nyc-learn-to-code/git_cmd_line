@@ -18,6 +18,7 @@
     + [Status](#status)
     + [Diff](#diff)
   * [Add (Staging)](#add-staging)
+    + [Discarding Changes](#discarding-changes)
   * [Commit](#commit)
     + [Commit Message Advice](#commit-message-advice)
   * [Exercises](#exercises-1)
